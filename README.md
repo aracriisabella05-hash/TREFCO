@@ -52,11 +52,32 @@
     .btn-primary{background-color: var(--accent); color:#fff;}
     footer{padding:20px 0; text-align:center; color:#777; border-top:1px solid #ddd;}
 
+    /* Centrar secciones */
+    #productos, 
+    #acerca-de,
+    #servicios {
+      text-align: center;
+    }
+    #productos img {
+      margin-top:20px;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    ul { 
+      list-style-position: inside; 
+      padding-left: 0;
+      text-align: left; 
+      max-width: 600px;
+      margin: 0 auto; 
+    }
+
     /* Responsive */
     @media(max-width:900px){
       .menu{display:none; flex-direction:column; gap:12px;}
       .burger{display:block;}
       .grid-3, .grid-4{grid-template-columns:1fr;}
+      ul {text-align: center;}
     }
   </style>
 </head>
@@ -66,7 +87,7 @@
   <div class="nav">
     <div class="brand">TREFCO</div>
     <nav class="menu">
-      <a href="#productos">Acerca de nosotros</a>
+      <a href="#acerca-de">Acerca de nosotros</a>
       <a href="#servicios">Servicios</a>
       <a href="#productos">Productos</a>
       <a href="#contacto" class="btn btn-primary">Contacto</a>
@@ -87,14 +108,14 @@
   </section>
 
   <!-- Acerca de -->
-  <section id="productos">
+  <section id="acerca-de">
     <h2>Acerca de Nosotros</h2>
     <p>Emplazados en Avellaneda, Buenos Aires, somos especialistas en producción de alambres, hilos y cuerdas de cobre, aluminio y metales no ferrosos. Contamos con más de 25 años de trayectoria ofreciendo calidad y confianza a nuestros clientes y proveedores.</p>
     <img src="images/planta.jpg" alt="Planta industrial">
   </section>
 
   <!-- Productos -->
-  <section>
+  <section id="productos">
     <h2>Productos</h2>
     <p class="subtitle">Nuestra gama incluye:</p>
     <ul>
@@ -132,31 +153,24 @@
   </section>
 
   <section id="contacto" class="container">
-  <h2 style="text-align:center; color:#1b2966;">Contactate con nosotros</h2>
-  
-  <div style="display:flex; gap:40px; flex-wrap:wrap; justify-content:center; margin-top:30px;">
-    
-    <!-- Info de contacto -->
-    <div style="flex:1; min-width:250px;">
-      <p><strong>Mail:</strong> trefco@trefco.com.ar</p>
-      <p><strong>Tel / Cel:</strong> 11 4201 4735 / 11 2649 0109</p>
-      <p><strong>Horarios:</strong> 8 hs a 16 hs</p>
-      <p><strong>Dirección:</strong> Dean Funes 450 / 52, Avellaneda</p>
-    </div>
+    <h2 style="text-align:center; color:#1b2966;">Contactate con nosotros</h2>
+    <div style="display:flex; gap:40px; flex-wrap:wrap; justify-content:center; margin-top:30px;">
+      <!-- Info de contacto -->
+      <div style="flex:1; min-width:250px;">
+        <p><strong>Mail:</strong> trefco@trefco.com.ar</p>
+        <p><strong>Tel / Cel:</strong> 11 4201 4735 / 11 2649 0109</p>
+        <p><strong>Horarios:</strong> 8 hs a 16 hs</p>
+        <p><strong>Dirección:</strong> Dean Funes 450 / 52, Avellaneda</p>
+      </div>
 
-    <!-- Formulario -->
-    <form id="contactForm" style="flex:1; min-width:250px;" novalidate>
-      <input type="text" name="nombre" placeholder="Nombre" required style="width:100%; margin-bottom:10px;">
-      <input type="email" name="email" placeholder="Email" required style="width:100%; margin-bottom:10px;">
-      <input type="text" name="asunto" placeholder="Asunto" style="width:100%; margin-bottom:10px;">
-      <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto…" required style="width:100%; margin-bottom:10px;"></textarea>
-      <button class="btn btn-primary" type="submit" style="width:100%;">Enviar</button>
-      <p id="formMsg" class="subtitle"></p>
-    </form>
-
-  </div>
-</section>
-
+      <!-- Formulario -->
+      <form id="contactForm" style="flex:1; min-width:250px;" novalidate>
+        <input type="text" name="nombre" placeholder="Nombre" required style="width:100%; margin-bottom:10px;">
+        <input type="email" name="email" placeholder="Email" required style="width:100%; margin-bottom:10px;">
+        <input type="text" name="asunto" placeholder="Asunto" style="width:100%; margin-bottom:10px;">
+        <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto…" required style="width:100%; margin-bottom:10px;"></textarea>
+        <button class="btn btn-primary" type="submit" style="width:100%;">Enviar</button>
+        <p id="formMsg" class="subtitle"></p>
       </form>
     </div>
   </section>
