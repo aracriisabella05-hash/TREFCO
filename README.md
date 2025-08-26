@@ -10,21 +10,23 @@
 
   <style>
     :root{
-      --bg: #f9f9f9;
+      --bg: #f5f5f5;
       --card: #ffffff;
-      --primary: #1b2966;
+      --primary: #0a3d62; /* Azul marino */
       --secondary: #E4E4E4;
-      --accent: #1f3d8b;
-      --text: #1b2966;
+      --accent: #083057; /* Azul más oscuro para hover */
+      --text: #333;
       --radius: 12px;
       --shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
+
     *{box-sizing:border-box; margin:0; padding:0;}
     body{
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height:1.6;
+      text-align:center;
     }
     a{text-decoration:none; color:inherit;}
     header{
@@ -42,6 +44,7 @@
     .burger{display:none; font-size:1.5rem; background:none; border:none; cursor:pointer;}
     main{padding: 60px 0;}
     section{padding:60px 0;}
+    h1, h2{color: var(--primary);}
     h2{font-size:2rem; margin-bottom:20px;}
     .subtitle{color: #555;}
     .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
@@ -49,7 +52,8 @@
     .card{background: var(--card); padding:20px; border-radius: var(--radius); box-shadow: var(--shadow);}
     img{max-width:100%; border-radius: var(--radius);}
     .btn{padding:10px 16px; border-radius: var(--radius); font-weight:600; text-align:center; display:inline-block;}
-    .btn-primary{background-color: var(--accent); color:#fff;}
+    .btn-primary{background-color: var(--primary); color:#fff;}
+    .btn-primary:hover{background-color: var(--accent);}
     footer{padding:20px 0; text-align:center; color:#777; border-top:1px solid #ddd;}
 
     /* Centrar secciones */
@@ -70,6 +74,19 @@
       text-align: left; 
       max-width: 600px;
       margin: 0 auto; 
+    }
+
+    .producto {
+      display: inline-block;
+      margin: 20px;
+      text-align: center;
+    }
+
+    input, textarea {
+      padding:10px;
+      border-radius: var(--radius);
+      border:1px solid #ccc;
+      font-family:'Inter',sans-serif;
     }
 
     /* Responsive */
@@ -126,10 +143,10 @@
       <li>Cuerdas de aluminio de Ø 16 mm² a Ø 50 mm² en 7 hilos</li>
     </ul>
     <div class="grid-4" style="margin-top:20px;">
-      <div class="card" title="Producto 1"></div>
-      <div class="card" title="Producto 2"></div>
-      <div class="card" title="Producto 3"></div>
-      <div class="card" title="Producto 4"></div>
+      <div class="card producto" title="Producto 1"></div>
+      <div class="card producto" title="Producto 2"></div>
+      <div class="card producto" title="Producto 3"></div>
+      <div class="card producto" title="Producto 4"></div>
     </div>
   </section>
 
@@ -152,19 +169,18 @@
     </div>
   </section>
 
+  <!-- Contacto -->
   <section id="contacto" class="container">
-    <h2 style="text-align:center; color:#1b2966;">Contactate con nosotros</h2>
+    <h2 style="color:var(--primary);">Contactate con nosotros</h2>
     <div style="display:flex; gap:40px; flex-wrap:wrap; justify-content:center; margin-top:30px;">
-      <!-- Info de contacto -->
-      <div style="flex:1; min-width:250px;">
+      <div style="flex:1; min-width:250px; text-align:left;">
         <p><strong>Mail:</strong> trefco@trefco.com.ar</p>
         <p><strong>Tel / Cel:</strong> 11 4201 4735 / 11 2649 0109</p>
         <p><strong>Horarios:</strong> 8 hs a 16 hs</p>
         <p><strong>Dirección:</strong> Dean Funes 450 / 52, Avellaneda</p>
       </div>
 
-      <!-- Formulario -->
-      <form id="contactForm" style="flex:1; min-width:250px;" novalidate>
+      <form id="contactForm" style="flex:1; min-width:250px; text-align:left;" novalidate>
         <input type="text" name="nombre" placeholder="Nombre" required style="width:100%; margin-bottom:10px;">
         <input type="email" name="email" placeholder="Email" required style="width:100%; margin-bottom:10px;">
         <input type="text" name="asunto" placeholder="Asunto" style="width:100%; margin-bottom:10px;">
@@ -182,6 +198,7 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
   const burger = document.getElementById('burger');
   const nav = document.querySelector('.menu');
   burger?.addEventListener('click', ()=>{
@@ -207,60 +224,3 @@
 
 </body>
 </html>
-
-/* ====== ESTILOS GENERALES ====== */
-body {
-  font-family: system-ui, sans-serif;
-  background: #f5f5f5;   /* gris claro */
-  color: #333;
-  margin: 0;
-  padding: 0;
-  text-align: center;    /* centra todo el contenido por defecto */
-}
-
-/* ====== TITULOS ====== */
-h1, h2, h3 {
-  color: #0056b3;
-  margin-bottom: 16px;
-  text-align: center;    /* asegura centrado */
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-top: 32px;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-top: 40px;
-}
-
-/* ====== PARRAFOS ====== */
-p {
-  max-width: 700px;
-  margin: 0 auto 16px;   /* auto a izquierda y derecha = centrado */
-  line-height: 1.6;
-  font-size: 1rem;
-  color: #444;
-  text-align: center;    /* fuerza centrado */
-}
-
-/* ====== SECCION HERO ====== */
-.hero {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh; /* ocupa gran parte de la pantalla */
-}
-
-/* ====== SECCION ACERCA ====== */
-#acerca,
-#acerca-de {
-  padding: 40px 20px;
-  background: #fff;
-}
-
-
-
