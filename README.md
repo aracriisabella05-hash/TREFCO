@@ -1,6 +1,3 @@
-
- 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -210,3 +207,60 @@
 
 </body>
 </html>
+
+/* ====== ESTILOS GENERALES ====== */
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f5f5;   /* gris claro */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;    /* centra todo el contenido por defecto */
+}
+
+/* ====== TITULOS ====== */
+h1, h2, h3 {
+  color: #0056b3;
+  margin-bottom: 16px;
+  text-align: center;    /* asegura centrado */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 32px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 40px;
+}
+
+/* ====== PARRAFOS ====== */
+p {
+  max-width: 700px;
+  margin: 0 auto 16px;   /* auto a izquierda y derecha = centrado */
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #444;
+  text-align: center;    /* fuerza centrado */
+}
+
+/* ====== SECCION HERO ====== */
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; /* ocupa gran parte de la pantalla */
+}
+
+/* ====== SECCION ACERCA ====== */
+#acerca,
+#acerca-de {
+  padding: 40px 20px;
+  background: #fff;
+}
+
+
+
