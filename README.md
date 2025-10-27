@@ -142,6 +142,34 @@ nav a {
 .section.gray {
   background: #f5f5f5;
 }
+
+.productos-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
 // ================================
 // NAVBAR RESPONSIVE
 // ================================
@@ -208,33 +236,6 @@ if (form) {
   });
 }
 
-
-.productos-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  width: 300px;
-  padding: 20px;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
 /* ====== NAVBAR RESPONSIVE ====== */
 .menu-btn {
   display: none;
@@ -291,6 +292,8 @@ footer {
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
   
